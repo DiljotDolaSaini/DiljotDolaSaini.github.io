@@ -201,6 +201,7 @@ ul{
   //margin-top: 4em;
   padding-top: 5em;
   overflow-x: hidden;
+  margin-top: 2em;
 
 
   h1{
@@ -867,9 +868,10 @@ ul{
   }
 }
 
-@media only screen and (min-width: 400px){ 
+@media only screen and (min-width: 380px){ 
   .hero{ 
-    height: 60vh;
+    height: 80vh;
+    overflow-x: hidden;
   }
 
   .work{ 
