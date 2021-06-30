@@ -111,6 +111,7 @@ ul {
   padding: 4em;
   position: relative;
   height: 40vh;
+  overflow-x: hidden;
 }
 
 .hero .container h1 {
@@ -199,6 +200,7 @@ ul {
 
 .about {
   padding-top: 5em;
+  overflow-x: hidden;
 }
 
 .about h1 {
@@ -328,6 +330,7 @@ ul {
 
 .skillssection {
   padding: 2.7rem;
+  overflow-x: hidden;
 }
 
 .section__subtitle {
@@ -500,6 +503,7 @@ ul {
 
 .work {
   padding: 2em;
+  overflow-x: hidden;
 }
 
 .work h1 {
@@ -608,6 +612,7 @@ ul {
 }
 
 .project {
+  overflow-x: hidden;
   padding: 2em;
 }
 
@@ -913,6 +918,15 @@ ul {
   }
   to {
     opacity: 1;
+  }
+}
+
+@media only screen and (min-width: 400px) {
+  .hero {
+    height: 60vh;
+  }
+  .work img {
+    text-align: center;
   }
 }
 

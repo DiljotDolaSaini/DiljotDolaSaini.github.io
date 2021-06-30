@@ -103,6 +103,7 @@ ul{
   padding: 4em;
   position: relative;
   height: 40vh;
+  overflow-x: hidden;
 
   .container{ 
 
@@ -199,6 +200,7 @@ ul{
 .about{ 
   //margin-top: 4em;
   padding-top: 5em;
+  overflow-x: hidden;
 
 
   h1{
@@ -324,6 +326,7 @@ ul{
 
 .skillssection{ 
   padding: 2.7rem;
+  overflow-x: hidden;
 }
 
 .section__subtitle{ 
@@ -486,6 +489,7 @@ ul{
 
   //margin-bottom: 8em;
   padding: 2em;
+  overflow-x: hidden;
 
     h1{ 
       text-align: center;
@@ -601,6 +605,7 @@ ul{
 
 .project {
 
+  overflow-x: hidden;
   //margin-bottom: 6em;
   padding: 2em;
 
@@ -859,6 +864,21 @@ ul{
   }
   to{ 
     opacity: 1;
+  }
+}
+
+@media only screen and (min-width: 400px){ 
+  .hero{ 
+    height: 60vh;
+  }
+
+  .work{ 
+    //position: relative;
+    img{ 
+      text-align: center;
+      // left: 50%;
+      // transform: translateX(-50%);
+    }
   }
 }
 
