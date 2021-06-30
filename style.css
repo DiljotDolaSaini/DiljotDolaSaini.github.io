@@ -238,7 +238,7 @@ ul {
 }
 
 .about .left-column .second {
-  padding-top: 1.5em;
+  padding-top: 4em;
 }
 
 .about .left-column .experience {
@@ -252,8 +252,8 @@ ul {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding-left: 4.5em;
-  padding-right: 4.5em;
+  margin-top: 12.5em;
+  padding: 2em;
 }
 
 .about .left-column .experience h5 {
@@ -503,7 +503,7 @@ ul {
 }
 
 .work {
-  padding: 2em;
+  padding-top: 2em;
   overflow-x: hidden;
 }
 
@@ -561,7 +561,7 @@ ul {
 }
 
 .work .container img {
-  width: 25em;
+  width: 100%;
   display: block;
   text-align: center;
   margin-left: auto;
@@ -579,8 +579,6 @@ ul {
 
 .work .container p {
   display: block;
-  margin-left: auto;
-  margin-right: auto;
   width: 25em;
   margin-bottom: 2em;
   text-align: center;
@@ -713,7 +711,7 @@ ul {
 
 .popups .bg-tint {
   width: 4000px;
-  height: 1400vh;
+  height: 5000vh;
   left: -50em;
   background-color: rgba(0, 0, 0, 0.7);
   position: absolute;
@@ -922,17 +920,20 @@ ul {
   }
 }
 
-@media only screen and (min-width: 380px) {
+@media only screen and (min-width: 410px) {
   .hero {
-    height: 80vh;
+    height: 60vh;
     overflow-x: hidden;
+  }
+  .about .experience {
+    text-align: center;
   }
   .work img {
     text-align: center;
   }
 }
 
-@media only screen and (max-width: 845px) {
+@media only screen and (max-width: 845px) and (orientation: portrait) {
   .navbar {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -956,14 +957,16 @@ ul {
     background: white;
     height: 100%;
     width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
-    margin: 0;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    padding-top: 2em;
     top: 0;
     left: 0;
     -webkit-box-align: center;
@@ -974,8 +977,8 @@ ul {
     -webkit-transition: all 1.5s ease-out;
     transition: all 1.5s ease-out;
   }
-  .navbar .nav-links .secondary-nav {
-    margin-top: 9em;
+  .navbar .nav-links .primary-nav {
+    padding-bottom: em;
   }
   .navbar .nav-links ul {
     display: -webkit-box;
@@ -994,6 +997,8 @@ ul {
     padding: 1.4em;
     font-size: 1.3em;
     text-align: center;
+    margin: 0.5em;
+    font-size: 1em;
   }
   .navbar .nav-links li a:hover {
     font-weight: bold;
