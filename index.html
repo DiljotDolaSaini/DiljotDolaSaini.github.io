@@ -9,7 +9,7 @@
   <title>Diljot Dola Saini</title>
 </head>
 
-<body>
+<body class="blur">
 
   <div class="navbar"> 
     <div class="container">
@@ -44,7 +44,7 @@
       <div class="left-col">
         <h1>Hi, I'm <span>Diljot</span></h1>
         <p class="engineer">Electrical Engineer</p>
-        <p class="quote">"A 3rd year student at McMaster University"</p>
+        <p class="quote">A 3rd year student at McMaster University</p>
       </div>
 
       <div class="extras">
@@ -368,11 +368,10 @@
       </div>
     </div>
 
+    <!-- <div class="bg-tint"></div> -->
+
     <!-- For pop-ups -->
-    <div class="popups">
-
-      <div class="bg-tint"></div>
-
+    <div class="popups no-blur">
       <div class="project1-pop popup">
         <i class="uil uil-multiply close" id="closed-1"></i>
         <div class="p1">
@@ -583,39 +582,42 @@
     document.getElementById('id-1').addEventListener('click', 
       function(){ 
         document.querySelector('.project1-pop').style.display = 'block'; 
-        //document.querySelector('.p1').style.display = 'block'; 
-        document.querySelector('.bg-tint').style.display = 'block'; 
+        document.querySelector('.project1-pop').style.animation = 'slide-in 1.5s ease-out' 
+
       })
 
     document.getElementById('id-2').addEventListener('click', 
       function(){ 
         document.querySelector('.project2-pop').style.display = 'block'; 
-        document.querySelector('.bg-tint').style.display = 'block'; 
+        document.querySelector('.project2-pop').style.animation = 'slide-in 1.5s ease-out' 
       })
 
     document.getElementById('id-3').addEventListener('click', 
       function(){ 
         document.querySelector('.project3-pop').style.display = 'block'; 
-        document.querySelector('.bg-tint').style.display = 'block'; 
+        document.querySelector('.project3-pop').style.animation = 'slide-in 1.5s ease-out' 
       })
 
     //TO CLOSE THE POP-UP
     document.getElementById('closed-1').addEventListener('click', 
     function(){ 
       document.querySelector('.project1-pop').style.display = 'none';
-      document.querySelector('.bg-tint').style.display = 'none';
+      document.querySelector('.project1-pop').style.animation = 'slide-in 1.5s ease-out' 
+      
     })
 
     document.getElementById('closed-2').addEventListener('click', 
     function(){ 
       document.querySelector('.project2-pop').style.display = 'none';
-      document.querySelector('.bg-tint').style.display = 'none';
+      document.querySelector('.project2-pop').style.animation = 'slide-in 1.5s ease-out' 
+      
     })
 
     document.getElementById('closed-3').addEventListener('click', 
     function(){ 
       document.querySelector('.project3-pop').style.display = 'none';
-      document.querySelector('.bg-tint').style.display = 'none';
+      document.querySelector('.project3-pop').style.animation = 'slide-out 1.5s ease-out' 
+
     })
 
     //SWITCH 1
