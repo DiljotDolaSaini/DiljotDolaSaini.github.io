@@ -694,34 +694,25 @@ ul{
     }
 
     .image__title{ 
-      font-size: 2.5em;
+      font-size: 1.8em;
       font-weight: bold;
     }
 
     .image__overlay--blur{ 
-      backdrop-filter: blur(5px);
+      backdrop-filter: blur(2px);
     }
   }
 }
 
 @keyframes slide-in {
   from {
-    clip-path: circle(100px at 95% -15%);
-    -webkit-clip-path: circle(100px at 95% -15%);
+    clip-path: circle(100px at 50%);
+    -webkit-clip-path: circle(100px at 50%);
     // transition: all 1.5s ease-out; 
   }
   to {
-    clip-path: circle(2000px at 95% -15%);
-    -webkit-clip-path: circle(2000px at 95% -15%);
-  }
-}
-
-@keyframes slide-out {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
+    clip-path: circle(2000px at 50%);
+    -webkit-clip-path: circle(2000px at 50%);
   }
 }
 
@@ -760,8 +751,7 @@ ul{
     }
 
     p{ 
-      margin-top: 80%;
-      position: absolute;
+      //position: absolute;
       display: block;
       justify-content: center;
       text-align: center;
@@ -770,9 +760,9 @@ ul{
     }
 
     img{ 
-      position: absolute;
-      left: 50%;
-      transform: translateX(-50%);
+      //position: absolute;
+      display: block;
+      //transform: translateX(-50%);
     }
   }
 
@@ -1039,10 +1029,10 @@ ul{
     padding-top: 5em; 
     .container{ 
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(2, 0.5fr);
 
       .image__title{ 
-        font-size: 1.5em;
+        font-size: 2em;
       }
     }
   }
@@ -1068,6 +1058,21 @@ ul{
     }
   }
 
+  .work{ 
+    .container{ 
+      p{ 
+        margin-left: 30%;
+      }
+
+      img{ 
+        width: 70%;
+      }
+    }
+
+    
+  }
+
+
   // .project{ 
   //   .container{ 
   //     display: grid;
@@ -1089,10 +1094,10 @@ ul{
   }
 
   .hero{ 
-    height: 70vh;
+    height: 90vh;
     
     .container{ 
-      margin-top: 8em;
+      margin-top: 6.5em;
       z-index: 999;
 
       h1{ 
@@ -1117,11 +1122,20 @@ ul{
 
   .about{ 
     padding-top: 10em;
-    padding-bottom: 10em;
+    padding-bottom: 7em;
+    
 
     .container{
       width: 90%;
-      padding: 1em;
+      display: block;
+      justify-content: center;
+      align-items: center;
+      // left: 50%;
+      // transform: translateX(-50%);
+      padding-bottom: 5em;
+
+
+      
     }
 
     display: flex;
@@ -1138,8 +1152,13 @@ ul{
       p{ 
         //margin-top: 1em;
         width: 40em;
-        margin-left: 16em;
+        margin-left: 10em;
         text-align: left;
+      }
+
+      .second{ 
+        margin-top: -3em;
+
       }
 
       .experience{ 
@@ -1180,6 +1199,7 @@ ul{
       p{ 
         width: 60%;
         font-size: 1em;
+        margin-left: 20%;
       }
 
       h3{ 
@@ -1223,18 +1243,19 @@ ul{
 
   .project{ 
 
-    padding: 3em 7em 16em ;
+    padding: 3em 7em 16em;
 
-    .container{ 
-      display: grid;
-      padding: 1em;
+    .container{
 
       .image__title{ 
         font-size: 2em;
         font-weight: bold;
       }
+
+
     }
   }
+
 
   .contact-section{ 
 

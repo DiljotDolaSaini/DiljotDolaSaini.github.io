@@ -700,52 +700,34 @@ ul {
 }
 
 .project .image .image__title {
-  font-size: 2.5em;
+  font-size: 1.8em;
   font-weight: bold;
 }
 
 .project .image .image__overlay--blur {
-  -webkit-backdrop-filter: blur(5px);
-          backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(2px);
+          backdrop-filter: blur(2px);
 }
 
 @-webkit-keyframes slide-in {
   from {
-    clip-path: circle(100px at 95% -15%);
-    -webkit-clip-path: circle(100px at 95% -15%);
+    clip-path: circle(100px at 50%);
+    -webkit-clip-path: circle(100px at 50%);
   }
   to {
-    clip-path: circle(2000px at 95% -15%);
-    -webkit-clip-path: circle(2000px at 95% -15%);
+    clip-path: circle(2000px at 50%);
+    -webkit-clip-path: circle(2000px at 50%);
   }
 }
 
 @keyframes slide-in {
   from {
-    clip-path: circle(100px at 95% -15%);
-    -webkit-clip-path: circle(100px at 95% -15%);
+    clip-path: circle(100px at 50%);
+    -webkit-clip-path: circle(100px at 50%);
   }
   to {
-    clip-path: circle(2000px at 95% -15%);
-    -webkit-clip-path: circle(2000px at 95% -15%);
-  }
-}
-
-@-webkit-keyframes slide-out {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
-  }
-}
-
-@keyframes slide-out {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
+    clip-path: circle(2000px at 50%);
+    -webkit-clip-path: circle(2000px at 50%);
   }
 }
 
@@ -785,8 +767,6 @@ ul {
 }
 
 .popups .popup p {
-  margin-top: 80%;
-  position: absolute;
   display: block;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -797,10 +777,7 @@ ul {
 }
 
 .popups .popup img {
-  position: absolute;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+  display: block;
 }
 
 .popups .arrowleft {
@@ -1068,11 +1045,11 @@ ul {
   .project .container {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: (1fr)[2];
-        grid-template-columns: repeat(2, 1fr);
+    -ms-grid-columns: (0.5fr)[2];
+        grid-template-columns: repeat(2, 0.5fr);
   }
   .project .container .image__title {
-    font-size: 1.5em;
+    font-size: 2em;
   }
   .contact-section {
     padding-top: 7em;
@@ -1086,6 +1063,12 @@ ul {
     padding-right: 2em;
     place-content: space-between;
   }
+  .work .container p {
+    margin-left: 30%;
+  }
+  .work .container img {
+    width: 70%;
+  }
 }
 
 @media only screen and (min-width: 1080px) {
@@ -1094,10 +1077,10 @@ ul {
     margin: 0 auto;
   }
   .hero {
-    height: 70vh;
+    height: 90vh;
   }
   .hero .container {
-    margin-top: 8em;
+    margin-top: 6.5em;
     z-index: 999;
   }
   .hero .container h1 {
@@ -1120,7 +1103,7 @@ ul {
   }
   .about {
     padding-top: 10em;
-    padding-bottom: 10em;
+    padding-bottom: 7em;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1136,15 +1119,25 @@ ul {
   }
   .about .container {
     width: 90%;
-    padding: 1em;
+    display: block;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding-bottom: 5em;
   }
   .about .left-column {
     width: 50%;
   }
   .about .left-column p {
     width: 40em;
-    margin-left: 16em;
+    margin-left: 10em;
     text-align: left;
+  }
+  .about .left-column .second {
+    margin-top: -3em;
   }
   .about .left-column .experience {
     margin-left: 85%;
@@ -1175,6 +1168,7 @@ ul {
   .work .container p {
     width: 60%;
     font-size: 1em;
+    margin-left: 20%;
   }
   .work .container h3 {
     font-size: 1.5em;
@@ -1208,11 +1202,6 @@ ul {
   }
   .project {
     padding: 3em 7em 16em;
-  }
-  .project .container {
-    display: -ms-grid;
-    display: grid;
-    padding: 1em;
   }
   .project .container .image__title {
     font-size: 2em;
