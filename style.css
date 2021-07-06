@@ -115,8 +115,17 @@ ul {
   margin: 0;
   padding: 4em;
   position: relative;
-  height: 40vh;
+  height: 88.5vh;
   overflow-x: hidden;
+}
+
+.hero .container {
+  position: absolute;
+  width: 90%;
+  left: 50%;
+  top: 30%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 
 .hero .container h1 {
@@ -540,7 +549,10 @@ ul {
 }
 
 .work .container {
-  padding: 1em;
+  width: 85%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .work .container .button {
@@ -566,27 +578,45 @@ ul {
 }
 
 .work .container img {
-  width: 100%;
+  width: 30em;
   display: block;
-  text-align: center;
   margin-left: auto;
   margin-right: auto;
   margin-top: 1.5em;
   border-radius: 0.9em;
 }
 
-.work .container .arrowright {
-  font-size: 3em;
-  position: absolute;
-  right: 3.5%;
-  cursor: pointer;
+.work .container .written-content {
+  position: relative;
+  width: 250px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.work .container p {
-  display: block;
+.work .container .written-content p {
   width: 25em;
   margin-bottom: 2em;
   text-align: center;
+  margin-left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.work .container .written-content .arrowright {
+  font-size: 3em;
+  position: absolute;
+  right: -50%;
+  top: 20%;
+  cursor: pointer;
+}
+
+.work .container .written-content .arrowleft {
+  font-size: 3em;
+  position: absolute;
+  left: -50%;
+  top: 20%;
+  cursor: pointer;
 }
 
 .work .container .part1 {
@@ -597,22 +627,26 @@ ul {
   display: none;
 }
 
-.work .container .part2 .arrowleft {
-  font-size: 3em;
-  position: absolute;
-  left: 5%;
-  cursor: pointer;
-}
-
 .work .container .part3 {
   display: none;
 }
 
-.work .container .part3 .arrowleft {
-  font-size: 3em;
-  position: absolute;
-  left: 5%;
-  cursor: pointer;
+@media only screen and (max-width: 575px) {
+  .work .container img {
+    width: 90%;
+  }
+  .work .container .written-content {
+    width: 150px;
+  }
+  .work .container .written-content p {
+    width: 19em;
+  }
+  .work .container .written-content .arrowright {
+    top: -2%;
+  }
+  .work .container .written-content .arrowleft {
+    top: -2%;
+  }
 }
 
 .project {
@@ -731,6 +765,24 @@ ul {
   }
 }
 
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 .popups {
   overflow-x: hidden;
 }
@@ -760,6 +812,10 @@ ul {
   position: absolute;
 }
 
+.popups .popup .content {
+  display: block;
+}
+
 .popups .popup h3 {
   margin-top: 2em;
   text-align: center;
@@ -767,17 +823,21 @@ ul {
 }
 
 .popups .popup p {
-  display: block;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  text-align: center;
   width: 25em;
-  padding: 1em;
+  text-align: center;
+  display: block;
+  margin-left: auto;
+  margin-top: -1em;
+  margin-right: auto;
+  font-size: 1.3em;
 }
 
 .popups .popup img {
+  width: 32em;
+  margin-top: -2.5em;
   display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .popups .arrowleft {
@@ -830,6 +890,34 @@ ul {
 
 .popups .project3-pop {
   display: none;
+}
+
+@media only screen and (min-width: 1150px) {
+  .popups .popup h3 {
+    margin-top: 7em;
+  }
+  .popups .popup .content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-top: 2em;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .popups .popup .content img {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .popups .popup .content p {
+    margin-left: 0;
+    margin-right: 0;
+    text-align: left;
+    margin-top: 1em;
+  }
 }
 
 .contact-section {
@@ -931,25 +1019,6 @@ ul {
   }
 }
 
-@media only screen and (min-width: 410px) {
-  .hero {
-    height: 90vh;
-    overflow-x: hidden;
-  }
-  .hero .container {
-    padding-top: 15vh;
-  }
-  .hero .container .quote {
-    width: 100%;
-  }
-  .about .experience {
-    text-align: center;
-  }
-  .work img {
-    text-align: center;
-  }
-}
-
 @media only screen and (max-width: 845px) {
   .navbar {
     display: -webkit-box;
@@ -962,7 +1031,7 @@ ul {
     position: absolute;
     display: block;
     top: 40%;
-    right: 9%;
+    right: 3.5em;
     cursor: pointer;
     z-index: 999;
   }
@@ -1036,9 +1105,6 @@ ul {
 }
 
 @media only screen and (min-width: 570px) {
-  .work {
-    padding-top: 4em;
-  }
   .project {
     padding-top: 5em;
   }
@@ -1063,43 +1129,12 @@ ul {
     padding-right: 2em;
     place-content: space-between;
   }
-  .work .container p {
-    margin-left: 30%;
-  }
-  .work .container img {
-    width: 70%;
-  }
 }
 
 @media only screen and (min-width: 1080px) {
   .container {
     width: 80%;
     margin: 0 auto;
-  }
-  .hero {
-    height: 90vh;
-  }
-  .hero .container {
-    margin-top: 6.5em;
-    z-index: 999;
-  }
-  .hero .container h1 {
-    font-size: 6.5em;
-  }
-  .hero .container p {
-    font-size: 1.3em;
-  }
-  .hero .container .extras {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-  }
-  .hero .container .extras a {
-    color: white;
   }
   .about {
     padding-top: 10em;
@@ -1157,33 +1192,6 @@ ul {
     width: 45%;
     margin-top: -35em;
     margin-bottom: 2em;
-  }
-  .work {
-    padding-bottom: 10em;
-  }
-  .work .container img {
-    margin-top: 0.5em;
-    width: 35em;
-  }
-  .work .container p {
-    width: 60%;
-    font-size: 1em;
-    margin-left: 20%;
-  }
-  .work .container h3 {
-    font-size: 1.5em;
-  }
-  .work .container .arrowright {
-    font-size: 5em;
-    left: 80%;
-  }
-  .work .container .part2 .arrowleft {
-    font-size: 5em;
-    left: 14%;
-  }
-  .work .container .part3 .arrowleft {
-    font-size: 5em;
-    left: 14%;
   }
   .skillssection {
     padding-bottom: 5em;

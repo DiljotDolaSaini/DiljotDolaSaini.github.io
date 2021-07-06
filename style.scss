@@ -124,10 +124,16 @@ ul{
   margin: 0;
   padding: 4em;
   position: relative;
-  height: 40vh;
+  height: 88.5vh;
   overflow-x: hidden;
 
   .container{ 
+
+    position: absolute;
+    width: 90%;
+    left: 50%;
+    top: 30%;
+    transform: translateX(-50%);
 
     h1{ 
       text-align: center;
@@ -542,7 +548,10 @@ ul{
 
     .container{
 
-      padding: 1em;
+      width: 85%;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
 
       .button{ 
         border: 2px solid var(--primary-color);
@@ -567,27 +576,44 @@ ul{
       }
 
       img{ 
-        width: 100%;
+        width: 30em;
         display: block;
-        text-align: center;
         margin-left: auto;
         margin-right: auto;
         margin-top: 1.5em;
         border-radius: 0.9em;
       }
 
-      .arrowright {
-        font-size: 3em;
-        position: absolute;
-        right: 3.5%;
-        cursor: pointer;
-      }
-
-      p{ 
+      .written-content {
+        position: relative;
+        width: 250px;
         display: block;
-        width: 25em;
-        margin-bottom: 2em;
-        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+
+        p{ 
+          width: 25em;
+          margin-bottom: 2em;
+          text-align: center;
+          margin-left: 50%;
+          transform: translateX(-50%);
+        }
+  
+        .arrowright {
+          font-size: 3em;
+          position: absolute;
+          right: -50%;
+          top: 20%;
+          cursor: pointer;
+        }
+
+        .arrowleft {
+          font-size: 3em;
+          position: absolute;
+          left: -50%;
+          top: 20%;
+          cursor: pointer;
+        }
       }
 
       .part1 {
@@ -598,28 +624,41 @@ ul{
       .part2 {
 
         display: none;
-
-        .arrowleft {
-          font-size: 3em;
-          position: absolute;
-          left: 5%;
-          cursor: pointer;
-        }
       }
 
       .part3 {
 
         display: none;
-
-        .arrowleft {
-          font-size: 3em;
-          position: absolute;
-          left: 5%;
-          cursor: pointer;
-        }
       }
 
     }
+}
+
+@media only screen and (max-width: 575px) {
+  .work {
+    .container {
+
+      img {
+        width: 90%;
+      }
+
+      .written-content {
+        width: 150px;
+
+        p {
+          width: 19em;
+        }
+
+        .arrowright {
+          top: -2%;
+        }
+
+        .arrowleft {
+          top: -2%;
+        }
+      }
+    }
+  }
 }
 
 .project {
@@ -716,6 +755,16 @@ ul{
   }
 }
 
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
 .popups {
   overflow-x: hidden;
   //position: relative;
@@ -733,7 +782,6 @@ ul{
     display: none;
     overflow-x: hidden;
 
-  
     .close{ 
       display: block;
       margin-left: 90%;
@@ -744,6 +792,10 @@ ul{
       position: absolute;
     }
 
+    .content {
+      display: block;
+    }
+
     h3{ 
       margin-top: 2em;
       text-align: center;
@@ -752,18 +804,22 @@ ul{
 
     p{ 
       //position: absolute;
-      display: block;
-      justify-content: center;
-      text-align: center;
       width: 25em;
-      padding: 1em;
+      text-align: center;
+      display: block;
+      margin-left: auto;
+      margin-top: -1em;
+      margin-right: auto;
+      font-size: 1.3em;
     }
 
     img{ 
       //position: absolute;
+      width: 32em;
+      margin-top: -2.5em;
       display: block;
-      //transform: translateX(-50%);
-    }
+      margin-left: auto;
+      margin-right: auto;    }
   }
 
   .arrowleft{ 
@@ -812,6 +868,37 @@ ul{
   .project3-pop{ 
     display: none;
   }
+}
+
+@media only screen and (min-width: 1150px) {
+  .popups {
+    .popup {
+
+      h3 {
+        margin-top: 7em;
+      }
+
+      .content {
+        display: flex;
+        margin-top: 2em;
+        justify-content: center;
+        align-items: center;
+    
+        img {
+          margin-left: 0;
+          margin-right: 0;
+        }
+    
+        p {
+          margin-left: 0;
+          margin-right: 0;
+          text-align: left;
+          margin-top: 1em;
+        }
+    
+      }
+    }
+  } 
 }
 
 .contact-section{ 
@@ -891,33 +978,28 @@ ul{
 }
 
 @media only screen and (min-width: 410px){ 
-  .hero{ 
-    height: 90vh;
-    overflow-x: hidden;
+  // .hero{ 
+  //   height: 90vh;
+  //   overflow-x: hidden;
 
-    .container{ 
-      padding-top: 15vh;
+  //   .container{ 
+  //     width: 100%;
+  //     position: absolute;
+  //     left: 50%;
+  //     top: 50%;
+  //     transform: translate(-50%, -72%);
+  //     .quote{ 
+  //       width: 100%;
+  //     }
+  //   }
+  // }
 
-      .quote{ 
-        width: 100%;
-      }
-    }
-  }
+  // .about{ 
+  //   .experience{ 
+  //     text-align: center;
+  //   }
+  // }
 
-  .about{ 
-    .experience{ 
-      text-align: center;
-    }
-  }
-
-  .work{ 
-    //position: relative;
-    img{ 
-      text-align: center;
-      // left: 50%;
-      // transform: translateX(-50%);
-    }
-  }
 }
 
 @media only screen and (max-width: 845px){ 
@@ -932,7 +1014,7 @@ ul{
       position: absolute;
       display: block;
       top: 40%;
-      right: 9%;
+      right: 3.5em;
       cursor: pointer;
       z-index: 999;
     }
@@ -1022,9 +1104,6 @@ ul{
 
 @media only screen and (min-width: 570px){ 
 
-  .work{ 
-    padding-top: 4em;
-  }
   .project{
     padding-top: 5em; 
     .container{ 
@@ -1056,19 +1135,6 @@ ul{
       padding-right: 2em;
       place-content: space-between;
     }
-  }
-
-  .work{ 
-    .container{ 
-      p{ 
-        margin-left: 30%;
-      }
-
-      img{ 
-        width: 70%;
-      }
-    }
-
     
   }
 
@@ -1093,32 +1159,32 @@ ul{
     //padding-left: 2em;
   }
 
-  .hero{ 
-    height: 90vh;
+  // .hero{ 
+  //   height: 90vh;
     
-    .container{ 
-      margin-top: 6.5em;
-      z-index: 999;
+  //   .container{ 
+  //     margin-top: 6.5em;
+  //     z-index: 999;
 
-      h1{ 
-        font-size: 6.5em;
-      }
+  //     h1{ 
+  //       font-size: 6.5em;
+  //     }
 
-      p{ 
-        font-size: 1.3em;
-      }
+  //     p{ 
+  //       font-size: 1.3em;
+  //     }
 
-      .extras{ 
-        display: flex;
-        flex-direction: row;
+  //     .extras{ 
+  //       display: flex;
+  //       flex-direction: row;
         
 
-        a{ 
-          color: white;
-        }
-      }
-    }
-  }
+  //       a{ 
+  //         color: white;
+  //       }
+  //     }
+  //   }
+  // }
 
   .about{ 
     padding-top: 10em;
@@ -1187,45 +1253,6 @@ ul{
     }
   }
 
-  .work{ 
-
-    padding-bottom: 10em;
-    .container{ 
-      img{ 
-        margin-top: 0.5em;
-        width: 35em;
-      }
-
-      p{ 
-        width: 60%;
-        font-size: 1em;
-        margin-left: 20%;
-      }
-
-      h3{ 
-        font-size: 1.5em;
-      }
-
-      .arrowright{ 
-         font-size: 5em;
-         left: 80%;
-      }
-
-      .part2{ 
-        .arrowleft{ 
-          font-size: 5em;
-          left: 14%;
-        }
-      }
-
-      .part3{ 
-        .arrowleft{ 
-          font-size: 5em;
-          left: 14%;
-        }
-      }
-    }
-  }
 
   .skillssection{ 
     padding-bottom: 5em;
