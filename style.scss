@@ -237,7 +237,7 @@ ul{
 }
 
 section.hero{
-  height: 92vh;
+  height: 98vh;
   background: white;
   margin-top: 4em;
   position: relative;
@@ -289,7 +289,7 @@ section.hero{
   h4 {
     position: absolute;
     right: 2%;
-    bottom: 2%;
+    bottom: 6%;
     font-size: 1.5em;
     z-index: 2;
   }
@@ -401,6 +401,7 @@ section.hero{
       justify-content: left;
       color: white;
       width: 12em;
+      bottom: 6%;
     }
 
     .five {
@@ -420,34 +421,35 @@ section.hero{
   section.hero {
 
     h1 {
-      font-size: 4.5em;
-      padding-top: 2.5em;
+      font-size: 14vw;
+      padding-top: 2em;
     }
 
     .one {
-      top: 60%;
+      top: 64%;
+    }
+
+    .two {
+      top: 55%;
     }
 
     .bio {
-      font-size: 1.1em;
-
-      button {
-        font-size: 1.1em;
-      }
+      font-size: 3vw;
     }
 
     h4 {
       left: 6%;
+      bottom: 8%;
+
     }
   }
 
 }
 
 .about{ 
-  //margin-top: 4em;
-  padding-top: 5em;
+  margin-top: 3em;
+  padding-top: 10em;
   overflow-x: hidden;
-  margin-top: 2em;
 
 
   h1{
