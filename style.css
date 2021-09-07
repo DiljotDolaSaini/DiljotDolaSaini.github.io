@@ -254,6 +254,9 @@ section.hero .six {
 }
 
 @media only screen and (max-width: 1150px) {
+  section.hero {
+    overflow-x: hidden;
+  }
   section.hero h1 {
     font-size: 6em;
     padding-top: 1.5em;
@@ -290,12 +293,18 @@ section.hero .six {
 }
 
 @media only screen and (max-height: 615px) {
+  section.hero {
+    overflow-x: hidden;
+  }
   section.hero h1 {
     padding-top: .5em;
   }
 }
 
 @media only screen and (max-width: 920px) {
+  section.hero {
+    overflow-x: hidden;
+  }
   section.hero h1 {
     text-align: center;
     padding: 21vh 0 0 0;
@@ -330,6 +339,9 @@ section.hero .six {
 }
 
 @media only screen and (max-width: 675px) {
+  section.hero {
+    overflow-x: hidden;
+  }
   section.hero h1 {
     font-size: 14vw;
     padding-top: 20%;
@@ -351,6 +363,9 @@ section.hero .six {
 }
 
 @media only screen and (max-width: 520px) {
+  section.hero {
+    overflow-x: hidden;
+  }
   section.hero h1 {
     padding-top: 2em;
   }
@@ -409,6 +424,9 @@ section.hero .six {
 }
 
 @media only screen and (max-width: 360px) {
+  section.hero {
+    overflow-x: hidden;
+  }
   section.hero h4 {
     width: 12em;
     font-size: 1.3em;
@@ -849,6 +867,9 @@ section.hero .six {
 }
 
 @media only screen and (max-width: 575px) {
+  .work {
+    overflow-x: hidden;
+  }
   .work .container img {
     width: 90%;
   }
@@ -1243,6 +1264,7 @@ section.hero .six {
     display: flex;
     padding: 1em;
     position: fixed;
+    overflow-x: hidden;
   }
   .navbar .mobile-menu {
     position: absolute;
@@ -1324,6 +1346,7 @@ section.hero .six {
 @media only screen and (min-width: 570px) {
   .project {
     padding-top: 5em;
+    overflow-x: hidden;
   }
   .project .container {
     display: -ms-grid;
@@ -1341,6 +1364,9 @@ section.hero .six {
 }
 
 @media only screen and (min-width: 845px) {
+  .navbar {
+    overflow-x: hidden;
+  }
   .navbar .container {
     left: 0;
     padding-right: 2em;
@@ -1350,6 +1376,7 @@ section.hero .six {
 
 @media only screen and (min-width: 1080px) {
   .container {
+    overflow-x: hidden;
     width: 80%;
     margin: 0 auto;
   }
