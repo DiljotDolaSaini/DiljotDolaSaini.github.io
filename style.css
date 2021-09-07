@@ -254,8 +254,23 @@ section.hero .six {
 }
 
 @media only screen and (max-width: 1150px) {
+  section.hero h1 {
+    font-size: 6em;
+    padding-top: 1.5em;
+  }
+  section.hero .bio {
+    font-size: 1.4em;
+  }
   section.hero .one {
     left: -25%;
+    height: 400px;
+  }
+  section.hero .two {
+    top: 55%;
+  }
+  section.hero .four {
+    width: 300px;
+    height: 300px;
   }
   section.hero .three {
     display: none;
@@ -263,10 +278,20 @@ section.hero .six {
   section.hero .six {
     display: none;
   }
+  section.hero .bio {
+    font-size: 1.2em;
+  }
   section.hero h4 {
     -webkit-box-pack: right;
         -ms-flex-pack: right;
             justify-content: right;
+    bottom: 8%;
+  }
+}
+
+@media only screen and (max-height: 615px) {
+  section.hero h1 {
+    padding-top: .5em;
   }
 }
 
@@ -290,9 +315,10 @@ section.hero .six {
     color: white;
     width: 12em;
     bottom: 6%;
+    font-size: 1.8em;
   }
   section.hero .one {
-    height: 250px;
+    height: 350px;
   }
   section.hero .five {
     top: -10%;
@@ -320,6 +346,7 @@ section.hero .six {
   section.hero h4 {
     left: 6%;
     bottom: 8%;
+    font-size: 1.5em;
   }
 }
 
@@ -350,12 +377,15 @@ section.hero .six {
   section.hero .one {
     width: 400px;
     height: 200px;
-    padding-top: 2em;
     bottom: 0%;
+    padding-top: 10vh;
   }
 }
 
 @media only screen and (max-width: 376px) and (max-height: 813px) {
+  section.hero {
+    overflow-x: hidden;
+  }
   section.hero h1 {
     padding-top: 32vh;
   }
