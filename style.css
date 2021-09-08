@@ -132,6 +132,7 @@ section.hero {
   background: white;
   margin-top: 4em;
   position: relative;
+  overflow-y: hidden;
 }
 
 section.hero h1 {
@@ -526,7 +527,7 @@ section.hero .six {
   width: 22em;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 2em;
+  margin-top: 0em;
   margin-bottom: 0;
 }
 
@@ -595,7 +596,7 @@ section.hero .six {
 @media only screen and (max-width: 500px) {
   .about {
     overflow-x: hidden;
-    height: 1150px;
+    height: 1175px;
   }
   .about .container {
     position: relative;
@@ -616,9 +617,12 @@ section.hero .six {
     margin-left: 0;
     padding-left: 0;
   }
+  .about .container .left-column .socials {
+    margin-top: 26em;
+  }
   .about .container .right-column img {
     width: 250px;
-    margin-top: 27em;
+    margin-top: 2em;
   }
 }
 
@@ -1427,7 +1431,7 @@ section.hero .six {
 @media only screen and (min-width: 1150px) {
   .about {
     overflow-x: hidden;
-    height: 100vh;
+    height: 900px;
     position: relative;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1444,16 +1448,20 @@ section.hero .six {
   }
   .about .container {
     width: 950px;
-    height: 440px;
+    height: 540px;
     position: relative;
+    margin-top: 4em;
   }
-  .about .container img {
+  .about .container .right-column {
+    width: 300px;
+  }
+  .about .container .right-column img {
     padding-top: 30em;
   }
   .about .container .left-column {
     position: absolute;
     width: 650px;
-    left: 37%;
+    left: 35%;
     padding-left: 4em;
   }
   .about .container .left-column p {
@@ -1496,12 +1504,13 @@ section.hero .six {
     padding-left: 4em;
   }
   .about .left-column .socials {
-    margin-left: 21%;
-    margin-top: -5em;
+    position: absolute;
+    left: -46%;
+    top: 65%;
   }
   .about .right-column {
     width: 45%;
-    margin-top: -35em;
+    margin-top: -41em;
     margin-bottom: 2em;
   }
   .skillssection {
