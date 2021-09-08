@@ -23,7 +23,7 @@ ul {
 
 .navbar {
   background: white;
-  padding: 1em;
+  padding: 1.1em;
   z-index: 994;
   width: 100%;
   position: fixed;
@@ -65,7 +65,6 @@ ul {
           justify-content: space-between;
   background: white;
   position: unset;
-  height: auto;
   width: 100%;
   padding: 0;
   color: white;
@@ -75,6 +74,7 @@ ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  height: 1em;
 }
 
 .navbar .nav-links a {
@@ -102,7 +102,6 @@ ul {
   border: 3px solid var(--primary-color);
   font-weight: bold;
   border-radius: 5em;
-  margin-top: -.2em;
 }
 
 .navbar .nav-links li.go-premium-cta a:hover {
@@ -448,12 +447,20 @@ section.hero .six {
 }
 
 .about {
-  margin-top: 3em;
-  padding-top: 10em;
   overflow-x: hidden;
+  height: 1250px;
+  margin-top: 2em;
 }
 
-.about h1 {
+.about .container {
+  width: 90%;
+  height: 1000px;
+  margin-top: 2em;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.about .container h1 {
   text-align: center;
   text-transform: uppercase;
   margin: 0;
@@ -467,7 +474,7 @@ section.hero .six {
   text-underline-offset: 0.4em;
 }
 
-.about h2 {
+.about .container h2 {
   font-size: 0.9em;
   text-align: center;
   padding-top: 1em;
@@ -475,8 +482,8 @@ section.hero .six {
   color: grey;
 }
 
-.about .left-column p {
-  width: 80%;
+.about .container .left-column p {
+  width: 450px;
   position: absolute;
   left: 50%;
   -webkit-transform: translate(-50%, 0);
@@ -486,14 +493,9 @@ section.hero .six {
   line-height: 1.5em;
 }
 
-.about .left-column .second {
-  padding-top: 4em;
-}
-
-.about .left-column .experience {
+.about .container .left-column .experience {
   text-align: center;
-  margin-top: 9em;
-  padding-top: 3em;
+  margin-top: 7em;
   padding-bottom: 2em;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -501,18 +503,20 @@ section.hero .six {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin-top: 12.5em;
+  margin-left: auto;
+  margin-right: auto;
   padding: 2em;
+  width: 400px;
 }
 
-.about .left-column .experience h5 {
+.about .container .left-column .experience h5 {
   color: grey;
   margin: 0;
   width: 8em;
   text-align: center;
 }
 
-.about .left-column .socials {
+.about .container .left-column .socials {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -526,15 +530,15 @@ section.hero .six {
   margin-bottom: 0;
 }
 
-.about .left-column .socials a {
+.about .container .left-column .socials a {
   text-decoration: none;
 }
 
-.about .left-column .socials .media__icon {
+.about .container .left-column .socials .media__icon {
   color: #007AF3;
 }
 
-.about .left-column .socials .download {
+.about .container .left-column .socials .download {
   margin-top: auto;
   margin-bottom: auto;
   border: 3px solid var(--primary-color);
@@ -549,33 +553,73 @@ section.hero .six {
   font-size: 0.9em;
 }
 
-.about .left-column .socials .download .download__icon {
+.about .container .left-column .socials .download .download__icon {
   font-size: 1.4em;
   font-weight: bold;
   margin-left: 0.2em;
 }
 
-.about .left-column .socials .download:hover {
+.about .container .left-column .socials .download:hover {
   background: var(--primary-color);
   color: white;
 }
 
-.about .left-column .socials .icon {
+.about .container .left-column .socials .icon {
   font-size: 2.4em;
 }
 
-.about .left-column .socials .icon:hover {
+.about .container .left-column .socials .icon:hover {
   color: #043b72;
 }
 
-.about .right-column {
+.about .container .right-column {
   text-align: center;
 }
 
-.about .right-column img {
+.about .container .right-column img {
   width: 20em;
   border-radius: 12em;
-  margin: 3em;
+  margin: 1em;
+}
+
+@media only screen and (min-width: 640px) {
+  .about {
+    overflow-x: hidden;
+    height: 1150px;
+  }
+  .about .container .left-column p {
+    width: 600px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .about {
+    overflow-x: hidden;
+    height: 1150px;
+  }
+  .about .container {
+    position: relative;
+  }
+  .about .container .left-column p {
+    width: 300px;
+  }
+  .about .container .left-column .second {
+    padding-top: 5.5em;
+  }
+  .about .container .left-column .experience {
+    width: 300px;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    margin-left: 0;
+    padding-left: 0;
+  }
+  .about .container .right-column img {
+    width: 250px;
+    margin-top: 27em;
+  }
 }
 
 .skillssection {
@@ -1257,6 +1301,12 @@ section.hero .six {
   }
 }
 
+@media only screen and (min-width: 410px) {
+  .about .experience {
+    text-align: center;
+  }
+}
+
 @media only screen and (max-width: 845px) {
   .navbar {
     display: -webkit-box;
@@ -1374,15 +1424,11 @@ section.hero .six {
   }
 }
 
-@media only screen and (min-width: 1080px) {
-  .container {
-    overflow-x: hidden;
-    width: 80%;
-    margin: 0 auto;
-  }
+@media only screen and (min-width: 1150px) {
   .about {
-    padding-top: 10em;
-    padding-bottom: 7em;
+    overflow-x: hidden;
+    height: 100vh;
+    position: relative;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1397,15 +1443,36 @@ section.hero .six {
     width: 100;
   }
   .about .container {
-    width: 90%;
-    display: block;
+    width: 950px;
+    height: 440px;
+    position: relative;
+  }
+  .about .container img {
+    padding-top: 30em;
+  }
+  .about .container .left-column {
+    position: absolute;
+    width: 650px;
+    left: 37%;
+    padding-left: 4em;
+  }
+  .about .container .left-column p {
+    text-align: left;
+    width: 600px;
+    margin-left: 0em;
+  }
+  .about .container .left-column .second {
+    padding-top: 3em;
+  }
+  .about .container .left-column .experience {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    padding-bottom: 5em;
+    padding-top: 0;
+    margin-left: 3em;
   }
   .about .left-column {
     width: 50%;
