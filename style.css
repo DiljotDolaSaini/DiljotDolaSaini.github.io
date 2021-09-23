@@ -1406,7 +1406,7 @@ section.hero .six {
   .project .container {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: (0.5fr)[2];
+    -ms-grid-columns: (0.5fr);
         grid-template-columns: repeat(2, 0.5fr);
   }
   .project .container .image__title {
@@ -1454,7 +1454,7 @@ section.hero .six {
     margin-top: 4em;
   }
   .about .container .right-column {
-    width: 300px;
+    width: 1px;
   }
   .about .container .right-column img {
     padding-top: 30em;
@@ -1507,7 +1507,7 @@ section.hero .six {
   .about .left-column .socials {
     position: absolute;
     left: -46%;
-    top: 65%;
+    top: 75%;
   }
   .about .right-column {
     width: 45%;
@@ -1518,13 +1518,13 @@ section.hero .six {
     padding-bottom: 5em;
   }
   .skillssection .skills__container {
-    -ms-grid-columns: (1fr)[2];
-        grid-template-columns: repeat(2, 1fr);
+    -ms-grid-columns: (1fr);
+    grid-template-columns: repeat(2, 1fr);
     display: -ms-grid;
     display: grid;
     -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
   }
   .skillssection .skills__container .skills__content {
     margin: 2em;
