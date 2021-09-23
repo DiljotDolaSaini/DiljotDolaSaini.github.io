@@ -128,7 +128,7 @@ ul {
 }
 
 section.hero {
-  height: 98vh;
+  height: 100vh;
   background: white;
   margin-top: 4em;
   position: relative;
@@ -139,7 +139,7 @@ section.hero {
 section.hero h1 {
   font-size: 5.5em;
   padding: 1em 0 0 1.075em;
-  margin: 0;
+  margin: 0 0 0 2.5em;
   font-weight: 900;
 }
 
@@ -155,8 +155,9 @@ section.hero .bio {
       -ms-flex-align: center;
           align-items: center;
   font-size: 1.1em;
-  padding-top: .25em;
-  padding-left: 5.6em;
+  padding-top: 3.5em;
+  padding-left: 9em;
+  margin-left: 13em;
   color: var(--primary-color);
 }
 
@@ -170,7 +171,7 @@ section.hero .bio button {
   border-radius: 2em;
   font-size: 1.1em;
   font-family: 'Poppins';
-  padding: .25em 1em .25em 1em;
+  padding: .10em 1em .10em 1em;
   color: var(--primary-color);
   font-weight: 500;
   cursor: pointer;
@@ -183,9 +184,9 @@ section.hero .bio button:hover {
 
 section.hero h4 {
   position: absolute;
-  right: 2%;
-  bottom: 6%;
-  font-size: 1.5em;
+  top: 27%; 
+  left: 26.25%; 
+  font-size: 1em;
   z-index: 2;
 }
 
