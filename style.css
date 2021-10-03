@@ -10,6 +10,15 @@ body {
   overflow-x: hidden;
 }
 
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 body .blur {
   -webkit-filter: blur(0px);
   filter: blur(0px);
@@ -134,11 +143,13 @@ section.hero {
   position: relative;
   overflow-y: hidden;
   overflow-x: hidden;
+  -webkit-animation: none;
+          animation: none;
 }
 
 section.hero h1 {
   font-size: 5.5em;
-  padding: 1.5em 0 0 0;
+  padding: 19vh 0 0 0;
   margin: 0 0 0 0;
   font-weight: 900;
   text-align: center;
@@ -476,6 +487,8 @@ section.hero .six {
   overflow-x: hidden;
   height: 1250px;
   margin-top: 2em;
+  -webkit-animation: none;
+          animation: none;
 }
 
 .about .container {
@@ -1586,6 +1599,45 @@ section.hero .six {
     padding: .8em 2em;
     width: unset;
     cursor: pointer;
+  }
+}
+
+section.footer {
+  margin-top: -5em;
+  height: 24vw;
+  background: #d6d5d5;
+}
+
+section.footer h1 {
+  text-align: center;
+  color: var(--primary-color);
+  padding: 7vw 1em 0 1em;
+  font-size: 3vw;
+}
+
+section.footer h5 {
+  text-align: center;
+  font-size: 1vw;
+  color: black;
+  padding: 0em 1em 2.5em 1em;
+}
+
+section.footer a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+@media only screen and (max-width: 600px) {
+  section.footer {
+    height: 300px;
+  }
+  section.footer h1 {
+    font-size: 1.5em;
+    padding: 3em 1em 0 1em;
+  }
+  section.footer h5 {
+    font-size: .8em;
+    padding: 0em 3em 2.5em 3em;
   }
 }
 /*# sourceMappingURL=style.css.map */

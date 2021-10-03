@@ -20,11 +20,11 @@
       <nav class="nav-links active-link">
 
         <ul class="primary-nav">
+          <li></li><a href="#project" id="tap-project"></a></li>
           <li class="current"><a href="index.html">Home</a></li>
           <li><a href="#about" id="tap-about">About</a></li>
           <li><a href="#skills" id="tap-skills">Skills</a></li>
           <li><a href="#work" id="tap-work">Work</a></li>
-          <li><a href="#project" id="tap-project">Projects</a></li>
 
           <ul class="secondary-nav">
             <li><a href="#contact" id="tap-contact">Contact</a></li>
@@ -38,8 +38,8 @@
 
   <section class="hero">
 
-    <h1>Hi, I'm <span>Diljot</span></h1>
-    <div class="bio">
+    <h1 class="fadeIn">Hi, I'm <span>Diljot</span></h1>
+    <div class="bio fadeIn">
       <h4>A 3rd Year Student at McMaster University</h4>
       <div class="sub">
         <h3 class="profession">Electrical Engineer</h3>
@@ -57,7 +57,7 @@
 
   </section>
 
-  <section class="about" id="about">
+  <section class="about fadeIn" id="about">
     <div class="container">
       <h1>About </h1>
       <h2 class="intro">My Introduction</h2>
@@ -115,7 +115,7 @@
   </div>
   </section>
 
-  <section class="skillssection" id="skills">
+  <section class="skillssection fadeIn" id="skills">
     <h1 class="section__title">Skills</h1>
     <span class="section__subtitle">Technical Level</span>
 
@@ -293,7 +293,7 @@
     </div>
   </section>
 
-  <section class="work" id="work">
+  <section class="work fadeIn" id="work">
     <h1>Work</h1>
     <h2>Most Recent</h2>
 
@@ -350,7 +350,7 @@
     </div>
   </section>
 
-  <section class="contact-section" id="contact">
+  <section class="contact-section fadeIn" id="contact">
 
 
     <h1>Contact</h1>
@@ -376,6 +376,13 @@
         </form>
       </div>
     </div>
+  </section>
+
+  <section class="footer">
+
+    <h1 class="fadeIn">Copyright 2021 Diljot Dola Saini. All Rights Reserved</h1>
+    <h5 class="fadeIn">Images and Icons sourced from <a href = "https://pixabay.com/">Pixabay</a>, <a href = "https://www.pexels.com/">Pexels</a>, and <a href = "https://iconscout.com/unicons">Iconscout</a></h5>
+
   </section>
 
 
@@ -461,6 +468,28 @@
       else{ 
         entry.target.style.animation = 'none';
       }
+    })
+
+    
+
+    const fadeIns = document.querySelectorAll('.fadeIn')
+
+    observer = new IntersectionObserver((entries) => {
+
+        entries.forEach(entry => {
+
+            if(entry.intersectionRatio > 0) {
+                entry.target.style.animation = `fadeIn 1.5s ease-in`;
+                entry.target.style.opacity = '1';
+            }
+            else {
+                entry.target.style.animation = 'none'
+            }
+        })
+    })
+
+    fadeIns.forEach(fadeIn => {
+        observer.observe(fadeIn)
     })
 
     //WORK
