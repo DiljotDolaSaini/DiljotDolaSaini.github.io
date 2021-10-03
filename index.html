@@ -39,6 +39,8 @@
   <section class="hero">
 
     <h1 class="fadeIn">Hi, I'm <span>Diljot</span></h1>
+    <!-- <h1 class="glitch1 fadeIn">Hi, I'm Diljot</h1>
+    <h1 class="glitch2 fadeIn">Hi, I'm Diljot</h1> -->
     <div class="bio fadeIn">
       <h4>A 3rd Year Student at McMaster University</h4>
       <div class="sub">
@@ -472,25 +474,25 @@
 
     
 
-    const fadeIns = document.querySelectorAll('.fadeIn')
+    // const fadeIns = document.querySelectorAll('.fadeIn')
 
-    observer = new IntersectionObserver((entries) => {
+    // observer = new IntersectionObserver((entries) => {
 
-        entries.forEach(entry => {
+    //     entries.forEach(entry => {
 
-            if(entry.intersectionRatio > 0) {
-                entry.target.style.animation = `fadeIn 1.5s ease-in`;
-                entry.target.style.opacity = '1';
-            }
-            else {
-                entry.target.style.animation = 'none'
-            }
-        })
-    })
+    //         if(entry.intersectionRatio > 0) {
+    //             entry.target.style.animation = `fadeIn 1.5s ease-in`;
+    //             entry.target.style.opacity = '1';
+    //         }
+    //         else {
+    //             entry.target.style.animation = 'none'
+    //         }
+    //     })
+    // })
 
-    fadeIns.forEach(fadeIn => {
-        observer.observe(fadeIn)
-    })
+    // fadeIns.forEach(fadeIn => {
+    //     observer.observe(fadeIn)
+    // })
 
     //WORK
     document.getElementById('arrow1right').addEventListener('click', 
