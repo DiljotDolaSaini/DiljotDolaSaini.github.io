@@ -152,23 +152,27 @@ section.hero h1 {
   margin: 0 0 0 0;
   font-weight: 900;
   text-align: center;
-  // animation: glitch1 5s infinite;
-  // z-index: 3;
+  animation: glitch1 8s infinite;
+  z-index: 3;
 }
 
-// section.hero .glitch1 {
+// section.hero h1:nth-child(2) {
+//   position: absolute;
+//   top: 10%;
+//   left: 31%;
 //   z-index: 2;
-//   margin-top: -2em;
 //   line-height: 0;
 //   color: #67f3da;
-//   animation: glitch2 5s infinite;
+//   animation: glitch2 8s infinite;
 // }
 
-// section.hero .glitch2 {
+// section.hero h1:nth-child(3) {
+//   position: absolute;
+//   top: 10%;
+//   left: 31%;
 //   line-height: 0;
-//   margin-top: -1.6em;
 //   color: #f16f6f;
-//   animation: glitch3 5s infinite;
+//   animation: glitch3 8s infinite;
 // }
 
 section.hero h1 span {
@@ -442,7 +446,7 @@ section.hero .six {
     overflow-x: hidden;
   }
   section.hero h1 {
-    padding-top: 3.25em;
+    padding-top: 4.5em;
   }
   section.hero .one {
     width: 400px;
@@ -971,14 +975,26 @@ section.hero .six {
 
 .work .container .part1 {
   display: block;
+  
+  img {
+    height: 18em;
+  }
 }
 
 .work .container .part2 {
   display: none;
+
+  img {
+    height: 18em;
+  }
 }
 
 .work .container .part3 {
   display: none;
+
+  img {
+    height: 18em;
+  }
 }
 
 @media only screen and (max-width: 575px) {

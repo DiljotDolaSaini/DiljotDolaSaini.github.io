@@ -153,6 +153,9 @@ section.hero h1 {
   margin: 0 0 0 0;
   font-weight: 900;
   text-align: center;
+  -webkit-animation: glitch1 8s infinite;
+          animation: glitch1 8s infinite;
+  z-index: 3;
 }
 
 section.hero h1 span {
@@ -416,7 +419,7 @@ section.hero .six {
     overflow-x: hidden;
   }
   section.hero h1 {
-    padding-top: 3.25em;
+    padding-top: 4.5em;
   }
   section.hero .one {
     width: 400px;
@@ -944,12 +947,24 @@ section.hero .six {
   display: block;
 }
 
+.work .container .part1 img {
+  height: 18em;
+}
+
 .work .container .part2 {
   display: none;
 }
 
+.work .container .part2 img {
+  height: 18em;
+}
+
 .work .container .part3 {
   display: none;
+}
+
+.work .container .part3 img {
+  height: 18em;
 }
 
 @media only screen and (max-width: 575px) {
@@ -1355,6 +1370,7 @@ section.hero .six {
     display: -ms-flexbox;
     display: flex;
     padding: 1em;
+    margin-top: 0;
     position: fixed;
     overflow-x: hidden;
   }
